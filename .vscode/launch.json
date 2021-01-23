@@ -7,21 +7,15 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in library 'oj'",
+            "name": "Cargo test",
             "cargo": {
                 "args": [
                     "test",
-                    "--no-run",
-                    "--lib",
-                    "--package=oj"
-                ],
-                "filter": {
-                    "name": "oj",
-                    "kind": "lib"
-                }
+                    "--no-run"
+                ]
             },
-            "args": [],
-            "cwd": "${workspaceFolder}"
+            "program": "${cargo:program}",
+            "args": []
         }
     ]
 }
